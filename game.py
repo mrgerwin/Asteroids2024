@@ -149,6 +149,9 @@ while True:
     if pygame.sprite.spritecollideany(player, powerupSprites):
         powerup = pygame.sprite.spritecollideany(player, powerupSprites)
         powerup.kill()
+        
+    for asteroid in asteroidSprites:
+        asteroid.move()
     drawText(font)
     drawText2(font)
     drawLives(font)
